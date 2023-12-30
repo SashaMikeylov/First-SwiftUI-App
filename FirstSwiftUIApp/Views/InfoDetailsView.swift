@@ -24,21 +24,31 @@ struct InfoDetailsView: View {
                 Spacer()
                 
                 HStack {
-                    Text(post.title)
-                        .padding(.bottom, 300)
-                        .padding(.leading, 20)
-                        .font(.title3)
-                        .shadow(color: .blue, radius: 10)
+                    ZStack {
+                        Text(post.title)
+                            .padding(.bottom, 300)
+                            .padding(.leading, 20)
+                            .font(.title3)
+                            .shadow(color: .blue, radius: 10)
+                        post.avatar
+                            .resizable()
+                            .frame(width: 80, height: 80)
+                            .cornerRadius(40)
+                    
+                    }
+                    
                     Spacer()
                     Text(post.description)
                         .shadow(color: .blue, radius: 10)
                         .padding(.trailing, 20)
                 }
+                
+            
             }
         })
     }
 }
 
 #Preview {
-    InfoDetailsView(post: Post.createPosts()[0])
+    InfoDetailsView(post: Post.createPosts()[2])
 }
