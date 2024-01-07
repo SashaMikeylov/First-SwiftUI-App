@@ -8,13 +8,16 @@
 import SwiftUI
 
 struct InfoView: View {
+    var titleOn: Bool
+    
     var body: some View {
        
+        
+        
         NavigationView {
             
             List(Post.createPosts()) { post in
                 NavigationLink {
-                    
                     InfoDetailsView(post: post)
                 } label: {
                     InfoRow(post: post)
@@ -22,15 +25,15 @@ struct InfoView: View {
                         
                 }
             }
-            
+           
+            .navigationTitle(titleOn ? "Posts" : "")
             .padding(.leading, 10)
-            .navigationTitle("Posts")
             .listStyle(.plain)
                 
         }
     }
 }
 
-#Preview {
-    InfoView()
-}
+//#Preview {
+//    InfoView()
+//}

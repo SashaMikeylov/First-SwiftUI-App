@@ -11,31 +11,59 @@ struct SettingsView: View {
     
     //MARK: - States
     
-    @State private var toggleCheck: Bool = true
+    @Binding var titleOn: Bool 
     @State private var sliderCheck: Double = 0
     @State private var pickerSelectedIndex = 0
     
+    
+    
+    @Environment(\.colorScheme) var colorScheme
+    
     //MARK: - Body
+    
     var states = ["On", "Off"]
+    
+    
     var body: some View {
+        
         
         NavigationView {
             
             Form {
                 
-                Section {
-                    Text("Text")
-                }
+                //MARK: - First section
                 
                 Section {
-                    Toggle(isOn: $toggleCheck) {
-                        Text("Toggle")
+                    if colorScheme == .dark {
+                        Text("Dark Theme enabled")
+                    } else {
+                        Text("Light Theme enabled")
                     }
                 }
+                
+                //MARK: - Second section
+            
+                Section {
+                    Toggle(isOn: $titleOn) {
+                        Text("Toggle")
+                    }
+                    
+                    
+                    if titleOn == true {
+                        Text("Navigation title enabled")
+                    } else {
+                        Text("Navigation title not enabled")
+                    }
+    
+                }
+                
+                //MARK: - Third section
                 
                 Section {
                     Slider(value: $sliderCheck, in: -100...100, step: 0.1)
                 }
+                
+                //MARK: - Fourth section
                 
                 Section {
                     Picker(selection: $pickerSelectedIndex, label: Text("Picker")) {
@@ -44,15 +72,13 @@ struct SettingsView: View {
                         }
                     }
                 }
-            
-               
             }
-        
                 .navigationTitle("Settings")
         }
     }
+    
 }
 
-#Preview {
-    SettingsView()
-}
+//#Preview {
+//    SettingsView()
+//}

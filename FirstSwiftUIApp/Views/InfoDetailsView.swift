@@ -25,6 +25,7 @@ struct InfoDetailsView: View {
                 
                 HStack {
                     ZStack {
+                        
                         Text(post.title)
                             .padding(.bottom, 300)
                             .padding(.leading, 20)

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct InfoRow: View {
     var post: Post
-    
+
     var body: some View {
     
         VStack {
@@ -42,5 +42,5 @@ struct InfoRow: View {
 }
 
 #Preview {
-    InfoRow(post: Post.createPosts()[1])
+    InfoRow(post: Post.createPosts()[3])
 }

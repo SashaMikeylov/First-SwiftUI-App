@@ -8,16 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var titleOn = true
+    
     var body: some View {
         
         TabView {
             
             //MARK: - InfoView bar
             
-            InfoView()
+            InfoView(titleOn: titleOn)
                 .tabItem {
                     Image(systemName: "rectangle.fill.on.rectangle.fill")
                     Text("Posts")
+                    
                 }
             
             //MARK: - Hello world bar
@@ -30,7 +34,7 @@ struct ContentView: View {
             
             //MARK: - Settings bar
             
-            SettingsView()
+            SettingsView(titleOn: $titleOn)
                 .tabItem {
                     Image(systemName: "gearshape")
                     Text("Settings")
