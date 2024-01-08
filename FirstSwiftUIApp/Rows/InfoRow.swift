@@ -26,6 +26,7 @@ struct InfoRow: View {
         
                 Spacer()
             }
+            
             .padding(.top, 40)
             
             post.image

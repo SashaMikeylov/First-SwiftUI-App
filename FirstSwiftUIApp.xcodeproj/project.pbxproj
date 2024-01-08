@@ -18,7 +18,6 @@
 		24D8B5382B3DEE0600559051 /* InfoDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D8B5372B3DEE0600559051 /* InfoDetailsView.swift */; };
 		24D8B53A2B3E258C00559051 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D8B5392B3E258C00559051 /* SettingsView.swift */; };
 		24D8B53C2B3E276100559051 /* HelloWorldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D8B53B2B3E276100559051 /* HelloWorldView.swift */; };
-		24D8B54E2B4B336C00559051 /* UserSettingsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D8B54D2B4B336C00559051 /* UserSettingsService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,7 +33,6 @@
 		24D8B5372B3DEE0600559051 /* InfoDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoDetailsView.swift; sourceTree = "<group>"; };
 		24D8B5392B3E258C00559051 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		24D8B53B2B3E276100559051 /* HelloWorldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloWorldView.swift; sourceTree = "<group>"; };
-		24D8B54D2B4B336C00559051 /* UserSettingsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +69,6 @@
 				24CABD202B3C13DA0024DA36 /* Views */,
 				24D8B53D2B3FFBC900559051 /* Rows */,
 				24CABD1D2B3C13A40024DA36 /* Modeles */,
-				24D8B54C2B4B32DC00559051 /* Services */,
 				24CABD1E2B3C13B00024DA36 /* Extensions */,
 				24CABD0D2B38D6B90024DA36 /* Preview Content */,
 				24CABD0B2B38D6B90024DA36 /* Assets.xcassets */,
@@ -129,14 +126,6 @@
 				24CABD192B3A39150024DA36 /* InfoRow.swift */,
 			);
 			path = Rows;
-			sourceTree = "<group>";
-		};
-		24D8B54C2B4B32DC00559051 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				24D8B54D2B4B336C00559051 /* UserSettingsService.swift */,
-			);
-			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,7 +207,6 @@
 				24CABD082B38D6B30024DA36 /* FirstSwiftUIAppApp.swift in Sources */,
 				24CABD1A2B3A39150024DA36 /* InfoRow.swift in Sources */,
 				24D8B53C2B3E276100559051 /* HelloWorldView.swift in Sources */,
-				24D8B54E2B4B336C00559051 /* UserSettingsService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

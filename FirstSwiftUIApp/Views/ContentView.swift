@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var titleOn = true
+    @AppStorage("titleOn") private var titleOn = true
     
     var body: some View {
         

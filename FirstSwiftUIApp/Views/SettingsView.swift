@@ -66,11 +66,13 @@ struct SettingsView: View {
                 //MARK: - Fourth section
                 
                 Section {
-                    Picker(selection: $pickerSelectedIndex, label: Text("Picker")) {
-                        ForEach(0..<states.count) { index in
+                    Text("Picker")
+                    Picker("", selection: $pickerSelectedIndex) {
+                        ForEach(0..<states.count, id: \.self) { index in
                             Text(self.states[index])
                         }
                     }
+                    .pickerStyle(.segmented)
                 }
             }
                 .navigationTitle("Settings")
